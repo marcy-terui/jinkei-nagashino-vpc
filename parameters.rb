@@ -1,21 +1,18 @@
 ec2_instance_types = %w{
-  t1.micro
   t2.micro t2.small t2.medium
-  m1.small m1.medium m1.large m1.xlarge
-  m2.xlarge m2.2xlarge m2.4xlarge
-  m3.xlarge m3.2xlarge
-  c1.medium c1.xlarge
-  cc1.4xlarge cc2.8xlarge
-  cg1.4xlarge
+  m3.medium m3.large m3.xlarge m3.2xlarge
+  i2.xlarge i2.2xlarge i2.4xlarge i2.8xlarge
+  c3.large c3.xlarge c3.2xlarge c3.4xlarge c3.8xlarge
+  c4.large c4.xlarge c4.2xlarge c4.4xlarge c4.8xlarge
+  r3.large r3.xlarge r3.2xlarge r3.4xlarge r3.8xlarge
 }
 
 rds_instance_types = %w{
-  db.t1.micro
   db.t2.micro db.t2.small db.t2.medium
   db.m1.small db.m1.medium db.m1.large db.m1.xlarge
-  db.m3.medium db.m3.large db.m3.xlarge
+  db.m3.medium db.m3.large db.m3.xlarge db.m3.2xlarge
   db.m2.xlarge db.m2.2xlarge db.m2.4xlarge
-  db.cr1.8xlarge
+  db.r3.large db.r3.xlarge db.r3.2xlarge db.r3.4xlarge db.r3.8xlarge
 }
 
 AWSTemplateFormatVersion "2010-09-09"

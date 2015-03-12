@@ -27,5 +27,10 @@ LoadBalancer do
         InstanceProtocol "TCP"
       }
     ]
+    SecurityGroups [
+      _{
+        Ref "sgAMIMOTO11AutogenByAWSMPELB"
+      }
+    ]
   end
 end

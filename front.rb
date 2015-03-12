@@ -69,6 +69,7 @@ AmimotoFrontLC do
     end
   end
   Properties do
+    AssociatePublicIpAddress "true"
     ImageId do
       Fn__FindInMap [
         "MPAmimotov4",

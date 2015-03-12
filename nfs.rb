@@ -40,15 +40,19 @@ AmimotoWithRDSNFS do
     KeyName do
       Ref "KeyName"
     end
-    SecurityGroupIds [
+    Monitoring "false"
+    NetworkInterfaces [
       _{
-        Ref "sgAMIMOTO11AutogenByAWSMPNFS"
+        DeviceIndex "0"
+        AssociatePublicIpAddress "true"
+        SubnetId { Ref "AmimotoWithRDSNFSSubnet" }
+        GroupSet [
+          _{
+            Ref "sgAMIMOTO11AutogenByAWSMPNFS"
+          }
+        ]
       }
     ]
-    SubnetId do
-      Ref "AmimotoWithRDSNFSSubnet"
-    end
-    Monitoring "false"
     UserData do
       Fn__Base64 do
         Fn__Join [
